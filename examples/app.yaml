@@ -1,0 +1,3 @@
+name: fn-lib-go
+routes:
+  - /hello

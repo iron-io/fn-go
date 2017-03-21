@@ -1,0 +1,4 @@
+name: iron/hello-func-go
+version: latest
+runtime: go
+entrypoint: ./func
