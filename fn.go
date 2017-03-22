@@ -30,13 +30,13 @@ func HandleRequest(f HandlerFunc) error {
 }
 
 func IsHotContainer() bool {
-	return os.Getenv("FN_HOT") == "true"
+	return InputFormat() != "default"
 }
 
 func InputFormat() string {
 	f := os.Getenv("FN_FORMAT")
-	if f == "" && IsHotContainer() {
-		f = "http"
+	if f == "" {
+		f = "default"
 	}
 	return f
 }
